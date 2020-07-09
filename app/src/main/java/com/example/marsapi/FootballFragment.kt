@@ -48,7 +48,7 @@ class FootballFragment : Fragment() {
 
             override fun onResponse(call: Call<FootballList>, response: Response<FootballList>) {
               d("Abir","succcess")
-                showData(response.body()!!)
+                showAllData(response.body()!!)
 
             }
 
@@ -63,7 +63,7 @@ class FootballFragment : Fragment() {
 
 
 
-    private fun showData (footballList: FootballList){
+    private fun showAllData (footballList: FootballList){
         footballrecycler.apply {
             layoutManager = LinearLayoutManager(activity)
             adapter = FootballAdapter(footballList)
